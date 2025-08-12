@@ -4,21 +4,29 @@ import os
 import requests
 
 
+def create_nojekyll():
+    # Create a .nojekyll file to prevent GitHub from processing our files
+    with open("docs/.nojekyll", "w") as f:
+        pass
+
+
 def runServers():
-    with open("docs/playlist1.m3u8", "w") as file:
-        file.write("#EXTM3U\n")
+    create_nojekyll()  # Ensure .nojekyll exists
+
+    with open("docs/playlist1.m3u", "w", encoding='utf-8-sig') as file:  # Added BOM for better compatibility
+        file.write("#EXTM3U x-tvg-url=\"\"\n")
     for i in range(len(lis)):
         print(f"{i+1}.{lis[i]}")
         server1(i + 1, lis[i])
         
-    with open("docs/playlist2.m3u8", "w") as file:
-        file.write("#EXTM3U\n")
+    with open("docs/playlist2.m3u", "w", encoding='utf-8-sig') as file:
+        file.write("#EXTM3U x-tvg-url=\"\"\n")
     for i in range(len(hashCode)):
         print(f"{i+1}.{channels[i]}")
         server2(hashCode[i], channels[i])
 
-    with open("docs/playlist3.m3u8", "w") as file:
-        file.write("#EXTM3U\n")
+    with open("docs/playlist3.m3u", "w", encoding='utf-8-sig') as file:
+        file.write("#EXTM3U x-tvg-url=\"\"\n")
     for i in range(len(hashcode_3)):
         print(f"{i+1}.{channels_3[i]}")
         server3(hashcode_3[i], channels_3[i])
@@ -39,9 +47,8 @@ def server1(i, name):
     match = re.search(r'file:\s*"([^"]+playlist\.m3u8[^"]*)"', response.text)
     if match:
         stream_url = match.group(1)
-        # print(stream_url)
-        with open("docs/playlist1.m3u8", "a") as file:
-            file.write(f"#EXTINF:-1,{name}\n")
+        with open("docs/playlist1.m3u", "a", encoding='utf-8-sig') as file:
+            file.write(f'#EXTINF:-1 tvg-id="Adult.Programming.{name}.us" tvg-name="{name}" group-title="Adult",{name}\n')
             file.write(f"{stream_url}\n")
 
     else:
@@ -59,10 +66,9 @@ def server2(hash, name):
     token = data["fileUrl"]
 
     stream_url = f"https://moonlight.wideiptv.top/{name}/index.fmp4.m3u8?token={token}"
-    with open("docs/playlist2.m3u8", "a") as file:
-        file.write(f"#EXTINF:-1,{name}\n")
+    with open("docs/playlist2.m3u", "a", encoding='utf-8-sig') as file:
+        file.write(f'#EXTINF:-1 tvg-id="Adult.Programming.{name}.us" tvg-name="{name}" group-title="Adult",{name}\n')
         file.write(f"{stream_url}\n")
-    # print(stream_url)
 
 
 def server3(hash, name):
@@ -76,8 +82,8 @@ def server3(hash, name):
     token = data["fileUrl"]
 
     stream_url = f"https://moonlight.wideiptv.top/{name}/index.fmp4.m3u8?token={token}"
-    with open("docs/playlist3.m3u8", "a") as file:
-        file.write(f"#EXTINF:-1,{name}\n")
+    with open("docs/playlist3.m3u", "a", encoding='utf-8-sig') as file:
+        file.write(f'#EXTINF:-1 tvg-id="Adult.Programming.{name}.us" tvg-name="{name}" group-title="Adult",{name}\n')
         file.write(f"{stream_url}\n")
 
 
