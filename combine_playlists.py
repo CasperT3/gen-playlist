@@ -5,15 +5,14 @@ import re
 # ===== CONFIGURATION =====
 # Add or remove playlist URLs here as needed
 PLAYLISTS = [
-    "https://raw.githubusercontent.com/BuddyChewChew/My-Streams/refs/heads/main/Backup.m3u",
-    "https://raw.githubusercontent.com/BuddyChewChew/My-Streams/refs/heads/main/TheTVApp.m3u8",
-    "https://raw.githubusercontent.com/BuddyChewChew/buddylive/refs/heads/main/en/videoall.m3u",
-    "https://world-proxifier.xyz/streamed/playlist?timezone=et"
+    "https://raw.githubusercontent.com/BuddyChewChew/gen-playlist/refs/heads/main/docs/playlist1.m3u8",
+    "https://raw.githubusercontent.com/BuddyChewChew/gen-playlist/refs/heads/main/docs/playlist2.m3u8",
+    "https://raw.githubusercontent.com/BuddyChewChew/gen-playlist/refs/heads/main/docs/playlist3.m3u8"
     # Add more playlists here in the format: "URL_TO_PLAYLIST"
 ]
 
 # EPG URL
-EPG_URL = "https://github.com/BuddyChewChew/My-Streams/raw/refs/heads/main/epgs/Backup-epg.xml.gz"
+EPG_URL = "https://epgshare01.online/epgshare01/epg_ripper_DUMMY_CHANNELS.xml.gz"
 
 # Output file
 OUTPUT_FILE = "combined_playlist.m3u"
