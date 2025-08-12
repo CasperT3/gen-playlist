@@ -18,20 +18,14 @@ def runServers():
         file.write("#EXTM3U x-tvg-url=\"https://epgshare01.online/epgshare01/epg_ripper_DUMMY_CHANNELS.xml.gz\"\n")
     
     # Process each server and append to the combined playlist
-    with open("docs/playlist1.m3u", "w", encoding='utf-8-sig') as file:  # Added BOM for better compatibility
-        file.write("#EXTM3U x-tvg-url=\"\"\n")
     for i in range(len(lis)):
         print(f"{i+1}.{lis[i]}")
         server1(i + 1, lis[i])
         
-    with open("docs/playlist2.m3u", "w", encoding='utf-8-sig') as file:
-        file.write("#EXTM3U x-tvg-url=\"\"\n")
     for i in range(len(hashCode)):
         print(f"{i+1}.{channels[i]}")
         server2(hashCode[i], channels[i])
 
-    with open("docs/playlist3.m3u", "w", encoding='utf-8-sig') as file:
-        file.write("#EXTM3U x-tvg-url=\"\"\n")
     for i in range(len(hashcode_3)):
         print(f"{i+1}.{channels_3[i]}")
         server3(hashcode_3[i], channels_3[i])
@@ -52,44 +46,48 @@ def server1(i, name):
     match = re.search(r'file:\s*"([^"]+playlist\.m3u8[^"]*)"', response.text)
     if match:
         stream_url = match.group(1)
-        with open("docs/playlist1.m3u", "a", encoding='utf-8-sig') as file:
-            file.write(f'#EXTINF:-1 tvg-id="Adult.Programming.{name}.us" tvg-name="{name}" group-title="Adult",{name}\n')
+        with open("docs/combined_playlist.m3u", "a", encoding='utf-8-sig') as file:
+            file.write(f'#EXTINF:-1 tvg-id="Adult.Programming.Dummy.us" tvg-name="{name}" group-title="Adult",{name}\n')
             file.write(f"{stream_url}\n")
-
     else:
         print("No URL found.")
 
 
 def server2(hash, name):
     print("Running Server 2")
-    res = requests.post(
-        f"https://adult-tv-channels.click/C1Ep6maUdBIeKDQypo7a/{hash}",
-        headers={"Content-Type": "application/x-www-form-urlencoded"},
-    )
-
-    data = res.json()
-    token = data["fileUrl"]
-
-    stream_url = f"https://moonlight.wideiptv.top/{name}/index.fmp4.m3u8?token={token}"
-    with open("docs/playlist2.m3u", "a", encoding='utf-8-sig') as file:
-        file.write(f'#EXTINF:-1 tvg-id="Adult.Programming.{name}.us" tvg-name="{name}" group-title="Adult",{name}\n')
-        file.write(f"{stream_url}\n")
+    try:
+        res = requests.post(
+            f"https://adult-tv-channels.click/C1Ep6maUdBIeKDQypo7a/{hash}",
+            headers={"Content-Type": "application/x-www-form-urlencoded"},
+            timeout=10
+        )
+        data = res.json()
+        token = data["fileUrl"]
+        stream_url = f"https://moonlight.wideiptv.top/{name}/index.fmp4.m3u8?token={token}"
+        with open("docs/combined_playlist.m3u", "a", encoding='utf-8-sig') as file:
+            file.write(f'#EXTINF:-1 tvg-id="Adult.Programming.Dummy.us" tvg-name="{name}" group-title="Adult",{name}\n')
+            file.write(f"{stream_url}\n")
+    except Exception as e:
+        print(f"Error processing {name}: {str(e)}")
 
 
 def server3(hash, name):
     print("Running Server 3")
-    url = f"https://fuckflix.click/8RLxsc2AW1q8pvyvjqIQ"
-    res = requests.post(
-        f"{url}/{hash}", headers={"Content-Type": "application/x-www-form-urlencoded"}
-    )
-
-    data = res.json()
-    token = data["fileUrl"]
-
-    stream_url = f"https://moonlight.wideiptv.top/{name}/index.fmp4.m3u8?token={token}"
-    with open("docs/playlist3.m3u", "a", encoding='utf-8-sig') as file:
-        file.write(f'#EXTINF:-1 tvg-id="Adult.Programming.{name}.us" tvg-name="{name}" group-title="Adult",{name}\n')
-        file.write(f"{stream_url}\n")
+    try:
+        url = f"https://fuckflix.click/8RLxsc2AW1q8pvyvjqIQ"
+        res = requests.post(
+            f"{url}/{hash}", 
+            headers={"Content-Type": "application/x-www-form-urlencoded"},
+            timeout=10
+        )
+        data = res.json()
+        token = data["fileUrl"]
+        stream_url = f"https://moonlight.wideiptv.top/{name}/index.fmp4.m3u8?token={token}"
+        with open("docs/combined_playlist.m3u", "a", encoding='utf-8-sig') as file:
+            file.write(f'#EXTINF:-1 tvg-id="Adult.Programming.Dummy.us" tvg-name="{name}" group-title="Adult",{name}\n')
+            file.write(f"{stream_url}\n")
+    except Exception as e:
+        print(f"Error processing {name}: {str(e)}")
 
 
 #   print(stream_url)
