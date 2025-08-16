@@ -6,9 +6,9 @@
 
 :star: Playlist 1: [Backup.m3u](https://raw.githubusercontent.com/BuddyChewChew/My-Streams/refs/heads/main/Backup.m3u) Epg: [epg_ripper.xml.gz](https://epgshare01.online/epgshare01/epg_ripper_ALL_SOURCES1.xml.gz) 
 
-:star::new: Playlist 2: [TheTVApp.m3u8](https://raw.githubusercontent.com/BuddyChewChew/My-Streams/refs/heads/main/TheTVApp.m3u8) Epg: [epg.xml](https://tvpass.org/epg.xml) 
+:star: Playlist 2: [TheTVApp.m3u8](https://raw.githubusercontent.com/BuddyChewChew/My-Streams/refs/heads/main/TheTVApp.m3u8) Epg: [epg.xml](https://tvpass.org/epg.xml) HD/SD (SD Stays live)
 
-:star::new: Playlist 3: [videoall.m3u](https://raw.githubusercontent.com/BuddyChewChew/buddylive/refs/heads/main/en/videoall.m3u) Epg: [videoall.xml](https://raw.githubusercontent.com/BuddyChewChew/buddylive/refs/heads/main/en/videoall.xml) ( Thetvapp SD channels... Stay Live 24/7 )
+:star: Playlist 3: [videoall.m3u](https://raw.githubusercontent.com/BuddyChewChew/buddylive/refs/heads/main/en/videoall.m3u) Epg: [videoall.xml](https://raw.githubusercontent.com/BuddyChewChew/buddylive/refs/heads/main/en/videoall.xml) ( Thetvapp SD channels... Stay Live 24/7 )
 
 :star: [combine-remote-playlists](https://github.com/BuddyChewChew/combine-remote-playlists) `PLAYLISTS UPDATED 7/14/25`
 
