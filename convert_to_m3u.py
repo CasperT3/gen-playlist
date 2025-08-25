@@ -21,12 +21,14 @@ def is_valid_url(url):
     except ValueError:
         return False
 
-def check_stream(url, timeout=10, max_attempts=2):
+def check_stream(url, timeout=15, max_attempts=2):
     """Check if a stream URL is accessible and actually playable."""
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
         'Accept': '*/*',
-        'Connection': 'keep-alive'
+        'Connection': 'keep-alive',
+        'Referer': 'https://www.google.com/',
+        'Origin': 'https://www.google.com'
     }
     
     for attempt in range(max_attempts):
@@ -43,33 +45,51 @@ def check_stream(url, timeout=10, max_attempts=2):
                     response = requests.get(url, headers=headers, timeout=timeout, stream=True)
                     if response.status_code == 200:
                         content = response.text
-                        # Basic validation of m3u8 content
-                        if '#EXTM3U' in content and ('#EXTINF' in content or '.ts' in content):
+                        # Check if it's a valid m3u8 playlist
+                        if '#EXTM3U' not in content:
+                            return False, url
+                        
+                        # For master playlists, check if we can access at least one variant
+                        if '#EXT-X-STREAM-INF' in content:
+                            # Try to find a variant URL
+                            import re
+                            variant_urls = re.findall(r'\n([^\n\.]+\.m3u8[^\n]*)', content)
+                            if variant_urls:
+                                # Try the first variant
+                                variant_url = variant_urls[0]
+                                if not variant_url.startswith('http'):
+                                    # Handle relative URLs
+                                    from urllib.parse import urljoin
+                                    variant_url = urljoin(url, variant_url)
+                                return check_stream(variant_url, timeout, 1)  # Only try once for variants
+                        
+                        # For simple playlists, check if there are segments
+                        if '#EXTINF' in content and ('.ts' in content or 'EXT-X-MEDIA-SEQUENCE' in content):
                             return True, url
+                        
+                        return False, url
             
             # For direct video streams
             else:
                 # Try a range request first
                 range_headers = headers.copy()
-                range_headers['Range'] = 'bytes=0-1'
-                response = requests.head(url, headers=range_headers, timeout=timeout, allow_redirects=True, stream=True)
+                range_headers['Range'] = 'bytes=0-1024'  # Request first KB
                 
-                if response.status_code in (200, 206):
-                    # Check content type to ensure it's a video/audio stream
-                    content_type = response.headers.get('Content-Type', '').lower()
-                    if any(x in content_type for x in ['video/', 'audio/', 'application/octet-stream']):
-                        return True, url
-                
-                # If HEAD fails, try a small GET request
-                response = requests.get(url, headers=headers, timeout=timeout, stream=True)
-                if response.status_code == 200:
-                    # Read a small chunk to verify content
-                    chunk = next(response.iter_content(chunk_size=1024), None)
-                    if chunk:
+                with requests.get(url, headers=range_headers, timeout=timeout, stream=True) as response:
+                    if response.status_code in (200, 206):
+                        # Read a small chunk to verify content
+                        chunk = next(response.iter_content(chunk_size=1024), None)
+                        if not chunk:
+                            return False, url
+                            
+                        # Check content type to ensure it's a video/audio stream
+                        content_type = response.headers.get('Content-Type', '').lower()
+                        if not any(x in content_type for x in ['video/', 'audio/', 'application/octet-stream', 'application/vnd.apple.mpegurl']):
+                            return False, url
+                            
                         return True, url
                     
         except (requests.RequestException, Exception) as e:
-            # On first attempt, try one more time with increased timeout
             if attempt == max_attempts - 1:
                 return False, url
             time.sleep(1)  # Small delay before retry
@@ -138,7 +158,9 @@ def convert_to_m3u(content, output_file, max_workers=10):
     for entry in entries:
         if entry[0] == 'group':
             current_group = entry[1]
+            # Only add group title as a comment, not as a channel
             m3u_lines.append(f"#EXTINF:-1 tvg-id=\"{TVG_ID}\" group-title=\"{current_group}\",{current_group}")
+            m3u_lines.append("#" + current_group)  # Add as comment
         else:
             # Only add stream if it's in the valid_streams list
             stream_match = next(
@@ -146,7 +168,7 @@ def convert_to_m3u(content, output_file, max_workers=10):
                 None
             )
             if stream_match:
-                m3u_lines.append(f"#EXTINF:-1 tvg-id=\"{TVG_ID}\" tvg-logo=\"{LOGO_URL}\" group-title=\"{current_group}\",{entry[1]}")
+                m3u_lines.append(f"#EXTINF:-1 tvg-id=\"{TVG_ID}\" tvg-logo=\"{LOGO_URL}\" group-title=\"{current_group}\",{entry[1].split(' ', 1)[0] if ' ' in entry[1] else entry[1]}")
                 m3u_lines.append(stream_match[1])
     
     print(f"\nFound {len(valid_streams)}/{len(stream_entries)} working streams")
