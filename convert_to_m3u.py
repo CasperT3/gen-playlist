@@ -4,6 +4,10 @@ import concurrent.futures
 from urllib.parse import urlparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
+import urllib3
+
+# Suppress only the InsecureRequestWarning from urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 def fetch_content(url):
     try:
