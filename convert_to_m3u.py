@@ -54,6 +54,9 @@ def convert_to_m3u(content, output_file, max_workers=10):
     m3u_lines = ["#EXTM3U x-tvg-url=\"\""]
     entries = []
     
+    # Channel logo URL
+    LOGO_URL = "https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true"
+    
     # First, parse all entries
     for line in lines:
         line = line.strip()
@@ -106,7 +109,7 @@ def convert_to_m3u(content, output_file, max_workers=10):
                 None
             )
             if stream_match:
-                m3u_lines.append(f"#EXTINF:-1 group-title=\"{current_group}\",{entry[1]}")
+                m3u_lines.append(f"#EXTINF:-1 tvg-logo=\"{LOGO_URL}\" group-title=\"{current_group}\",{entry[1]}")
                 m3u_lines.append(stream_match[1])
     
     print(f"\nFound {len(valid_streams)}/{len(stream_entries)} working streams")
@@ -118,10 +121,18 @@ def convert_to_m3u(content, output_file, max_workers=10):
     print(f"Successfully converted to {output_file}")
 
 def main():
-    url = "https://raw.githubusercontent.com/jack2713/my/refs/heads/main/my02.txt"
+    import os
+    
+    # Get URL from environment variable
+    url = os.getenv('PLAYLIST_URL')
     output_file = "playlist.m3u"
     
-    print(f"Fetching content from {url}...")
+    if not url:
+        print("Error: PLAYLIST_URL environment variable is not set")
+        print("Please set the PLAYLIST_URL in your GitHub repository secrets")
+        return
+        
+    print(f"Fetching content from the provided URL...")
     content = fetch_content(url)
     
     if content:
