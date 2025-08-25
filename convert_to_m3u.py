@@ -21,31 +21,60 @@ def is_valid_url(url):
     except ValueError:
         return False
 
-def check_stream(url, timeout=5):
-    """Check if a stream URL is accessible."""
-    try:
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-        }
-        # For m3u8 and m3u playlists
-        if url.endswith(('.m3u8', '.m3u')):
-            response = requests.head(url, headers=headers, timeout=timeout, allow_redirects=True)
-            if response.status_code == 200:
-                return True, url
-        # For direct video streams
-        else:
-            # Try a small range request to check if the stream is accessible
-            headers['Range'] = 'bytes=0-1'
-            response = requests.head(url, headers=headers, timeout=timeout, allow_redirects=True)
-            if response.status_code in (200, 206):
-                return True, url
-            # If HEAD is not allowed, try GET with a small timeout
-            response = requests.get(url, headers=headers, timeout=timeout, stream=True)
-            if response.status_code == 200:
-                response.close()
-                return True, url
-    except (requests.RequestException, Exception) as e:
-        pass
+def check_stream(url, timeout=10, max_attempts=2):
+    """Check if a stream URL is accessible and actually playable."""
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+        'Accept': '*/*',
+        'Connection': 'keep-alive'
+    }
+    
+    for attempt in range(max_attempts):
+        try:
+            # For m3u8 and m3u playlists
+            if url.endswith(('.m3u8', '.m3u')):
+                # First check if the playlist is accessible
+                response = requests.head(url, headers=headers, timeout=timeout, allow_redirects=True, stream=True)
+                if response.status_code != 200:
+                    return False, url
+                
+                # For m3u8, try to fetch and parse the playlist
+                if url.endswith('.m3u8'):
+                    response = requests.get(url, headers=headers, timeout=timeout, stream=True)
+                    if response.status_code == 200:
+                        content = response.text
+                        # Basic validation of m3u8 content
+                        if '#EXTM3U' in content and ('#EXTINF' in content or '.ts' in content):
+                            return True, url
+            
+            # For direct video streams
+            else:
+                # Try a range request first
+                range_headers = headers.copy()
+                range_headers['Range'] = 'bytes=0-1'
+                response = requests.head(url, headers=range_headers, timeout=timeout, allow_redirects=True, stream=True)
+                
+                if response.status_code in (200, 206):
+                    # Check content type to ensure it's a video/audio stream
+                    content_type = response.headers.get('Content-Type', '').lower()
+                    if any(x in content_type for x in ['video/', 'audio/', 'application/octet-stream']):
+                        return True, url
+                
+                # If HEAD fails, try a small GET request
+                response = requests.get(url, headers=headers, timeout=timeout, stream=True)
+                if response.status_code == 200:
+                    # Read a small chunk to verify content
+                    chunk = next(response.iter_content(chunk_size=1024), None)
+                    if chunk:
+                        return True, url
+                    
+        except (requests.RequestException, Exception) as e:
+            # On first attempt, try one more time with increased timeout
+            if attempt == max_attempts - 1:
+                return False, url
+            time.sleep(1)  # Small delay before retry
+            continue
+            
     return False, url
 
 def convert_to_m3u(content, output_file, max_workers=10):
