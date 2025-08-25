@@ -80,11 +80,19 @@ def check_stream(url, timeout=10, max_attempts=2):
 def convert_to_m3u(content, output_file, max_workers=10):
     lines = content.split('\n')
     current_group = ""
-    m3u_lines = ["#EXTM3U x-tvg-url=\"\""]
-    entries = []
     
-    # Channel logo URL
+    # EPG and logo configuration
+    EPG_URL = "https://epgshare01.online/epgshare01/epg_ripper_DUMMY_CHANNELS.xml.gz"
+    TVG_ID = "Blank.Dummy.us"
     LOGO_URL = "https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true"
+    
+    # M3U header with EPG URL
+    m3u_lines = [
+        "#EXTM3U x-tvg-url=\"" + EPG_URL + "\"",
+        "#EXT-X-TVG-URL: " + EPG_URL
+    ]
+    
+    entries = []
     
     # First, parse all entries
     for line in lines:
@@ -130,7 +138,7 @@ def convert_to_m3u(content, output_file, max_workers=10):
     for entry in entries:
         if entry[0] == 'group':
             current_group = entry[1]
-            m3u_lines.append(f"#EXTINF:-1 group-title=\"{current_group}\",{current_group}")
+            m3u_lines.append(f"#EXTINF:-1 tvg-id=\"{TVG_ID}\" group-title=\"{current_group}\",{current_group}")
         else:
             # Only add stream if it's in the valid_streams list
             stream_match = next(
@@ -138,7 +146,7 @@ def convert_to_m3u(content, output_file, max_workers=10):
                 None
             )
             if stream_match:
-                m3u_lines.append(f"#EXTINF:-1 tvg-logo=\"{LOGO_URL}\" group-title=\"{current_group}\",{entry[1]}")
+                m3u_lines.append(f"#EXTINF:-1 tvg-id=\"{TVG_ID}\" tvg-logo=\"{LOGO_URL}\" group-title=\"{current_group}\",{entry[1]}")
                 m3u_lines.append(stream_match[1])
     
     print(f"\nFound {len(valid_streams)}/{len(stream_entries)} working streams")
