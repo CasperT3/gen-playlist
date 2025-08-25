@@ -121,16 +121,9 @@ def convert_to_m3u(content, output_file, max_workers=10):
     print(f"Successfully converted to {output_file}")
 
 def main():
-    import os
-    
-    # Get URL from environment variable
-    url = os.getenv('PLAYLIST_URL')
+    # Direct URL for the playlist
+    url = "https://raw.githubusercontent.com/jack2713/my/refs/heads/main/my02.txt"
     output_file = "playlist.m3u"
-    
-    if not url:
-        print("Error: PLAYLIST_URL environment variable is not set")
-        print("Please set the PLAYLIST_URL in your GitHub repository secrets")
-        return
         
     print(f"Fetching content from the provided URL...")
     content = fetch_content(url)
