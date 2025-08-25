@@ -21,14 +21,20 @@ def is_valid_url(url):
     except ValueError:
         return False
 
-def check_stream(url, timeout=15, max_attempts=2):
+# Cache for storing URL validation results
+url_cache = {}
+
+def check_stream(url, timeout=8, max_attempts=1):
     """Check if a stream URL is accessible and actually playable."""
+    # Check cache first
+    if url in url_cache:
+        return url_cache[url]
+        
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
         'Accept': '*/*',
-        'Connection': 'keep-alive',
-        'Referer': 'https://www.google.com/',
-        'Origin': 'https://www.google.com'
+        'Connection': 'close',  # Close connection after request
+        'Referer': 'https://www.google.com/'
     }
     
     for attempt in range(max_attempts):
@@ -36,19 +42,21 @@ def check_stream(url, timeout=15, max_attempts=2):
             # For m3u8 and m3u playlists
             if url.endswith(('.m3u8', '.m3u')):
                 # First check if the playlist is accessible
-                response = requests.head(url, headers=headers, timeout=timeout, allow_redirects=True, stream=True)
+                response = requests.head(url, headers=headers, timeout=timeout, allow_redirects=True, stream=False, verify=False)
                 if response.status_code != 200:
                     return False, url
                 
                 # For m3u8, try to fetch and parse the playlist
                 if url.endswith('.m3u8'):
-                    response = requests.get(url, headers=headers, timeout=timeout, stream=True)
+                    response = requests.get(url, headers=headers, timeout=timeout, stream=False, verify=False)
                     if response.status_code == 200:
                         content = response.text
                         # Check if it's a valid m3u8 playlist
                         if '#EXTM3U' not in content:
-                            return False, url
-                        
+                            result = (False, url)
+                            url_cache[url] = result
+                            return result
+                            
                         # For master playlists, check if we can access at least one variant
                         if '#EXT-X-STREAM-INF' in content:
                             # Try to find a variant URL
@@ -65,9 +73,13 @@ def check_stream(url, timeout=15, max_attempts=2):
                         
                         # For simple playlists, check if there are segments
                         if '#EXTINF' in content and ('.ts' in content or 'EXT-X-MEDIA-SEQUENCE' in content):
-                            return True, url
-                        
-                        return False, url
+                            result = (True, url)
+                            url_cache[url] = result
+                            return result
+                            
+                        result = (False, url)
+                        url_cache[url] = result
+                        return result
             
             # For direct video streams
             else:
@@ -80,14 +92,20 @@ def check_stream(url, timeout=15, max_attempts=2):
                         # Read a small chunk to verify content
                         chunk = next(response.iter_content(chunk_size=1024), None)
                         if not chunk:
-                            return False, url
+                            result = (False, url)
+                            url_cache[url] = result
+                            return result
                             
                         # Check content type to ensure it's a video/audio stream
                         content_type = response.headers.get('Content-Type', '').lower()
                         if not any(x in content_type for x in ['video/', 'audio/', 'application/octet-stream', 'application/vnd.apple.mpegurl']):
-                            return False, url
+                            result = (False, url)
+                            url_cache[url] = result
+                            return result
                             
-                        return True, url
+                        result = (True, url)
+                        url_cache[url] = result
+                        return result
                     
         except (requests.RequestException, Exception) as e:
             if attempt == max_attempts - 1:
@@ -97,7 +115,7 @@ def check_stream(url, timeout=15, max_attempts=2):
             
     return False, url
 
-def convert_to_m3u(content, output_file, max_workers=10):
+def convert_to_m3u(content, output_file, max_workers=20):  # Increased max_workers
     lines = content.split('\n')
     current_group = ""
     
@@ -155,19 +173,23 @@ def convert_to_m3u(content, output_file, max_workers=10):
     
     # Build the final M3U file
     current_group = ""
+    seen_urls = set()  # Track seen URLs to avoid duplicates
+    
     for entry in entries:
         if entry[0] == 'group':
             current_group = entry[1]
-            # Only add group title as a comment, not as a channel
             m3u_lines.append(f"#EXTINF:-1 tvg-id=\"{TVG_ID}\" group-title=\"{current_group}\",{current_group}")
             m3u_lines.append("#" + current_group)  # Add as comment
         else:
-            # Only add stream if it's in the valid_streams list
+            # Only add stream if it's in the valid_streams list and URL not seen before
             stream_match = next(
-                (s for s in valid_streams if s[0] == entry[1] and s[2] == current_group and s[1] == entry[2]),
+                (s for s in valid_streams 
+                 if s[0] == entry[1] and s[2] == current_group and s[1] == entry[2] 
+                 and s[1] not in seen_urls),
                 None
             )
             if stream_match:
+                seen_urls.add(stream_match[1])  # Mark URL as seen
                 m3u_lines.append(f"#EXTINF:-1 tvg-id=\"{TVG_ID}\" tvg-logo=\"{LOGO_URL}\" group-title=\"{current_group}\",{entry[1].split(' ', 1)[0] if ' ' in entry[1] else entry[1]}")
                 m3u_lines.append(stream_match[1])
     
