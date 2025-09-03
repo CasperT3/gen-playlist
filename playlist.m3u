@@ -2,7 +2,7 @@
 #EXT-X-TVG-URL: https://epgshare01.online/epgshare01/epg_ripper_DUMMY_CHANNELS.xml.gz
 #EXTINF:-1 tvg-id="Blank.Dummy.us" group-title="注意事项",注意事项
 #注意事项
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="注意事项",20250902004453仅供测试自用如有侵权请通知
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="注意事项",20250903004203仅供测试自用如有侵权请通知
 http://rihou.cc:555/mp4?id=lndjll.mp4
 #EXTINF:-1 tvg-id="Blank.Dummy.us" group-title="=XXX直播=",=XXX直播=
 #=XXX直播=
@@ -30,68 +30,78 @@ https://t27.cdn2020.com/video/m3u8/2020/10/09/543287aa/index.m3u8
 https://t30.cdn2020.com/video/m3u8/2025/01/30/3b85faa5/index.m3u8
 #EXTINF:-1 tvg-id="Blank.Dummy.us" group-title="=欧美直播1=",=欧美直播1=
 #=欧美直播1=
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",ADULT
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/58045
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",AdultIPTV.net
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70743
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70764
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",AdultIPTV.net
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70748
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",COUGARS
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/75912
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70747
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",CENTO
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/75968
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",Danielle
 http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/74505
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",DORCEL
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/75981
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",DORCEL
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/75894
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",DORCEL
 http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/75980
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",DORCEL
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/75949
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",DUSK
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/75934
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",EROX
 http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/75901
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",EROX
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/76276
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",HOT
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/75994
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",NIGHT
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/75925
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/76008
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",MAX
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/58075
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",OpenTV
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70711
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70709
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",OpenTV
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70706
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",OpenTV
 http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/71246
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",OpenTV
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70717
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",OpenTV
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70714
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",OpenTV
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70705
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",OpenTV
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70719
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",OpenTV
 http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/75886
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",OpenTV
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70701
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70715
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",OpenTV
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/71123
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70698
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",OpenTV
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70694
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",OpenTv
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/71135
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",OpenTV
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70692
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",OpenTV
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70691
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70695
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",OpenTv
 http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70690
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",PASSIONX
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/75926
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",PEGGING
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/58060
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",PENTHOUSE
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/75933
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",PENTHOUSEGOLD
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/76279
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",PETITE
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/58067
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",PUBLIC
 http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/58069
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",REDLIGHT
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/75895
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",SEXBOX
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/76298
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",SLTV
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/76312
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",VIVID
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/75897
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/75970
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",SLTV
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/76305
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",SLTV
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/76313
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",TURKHUB
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/76286
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",TUSHY
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/75985
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",VENUS
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/75927
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",MyCamTV
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70733
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",MyCamTV
 http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70729
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",MyCamTV
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70738
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="=欧美直播1=",MyCamTV
-http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70731
+http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/70722
 #EXTINF:-1 tvg-id="Blank.Dummy.us" group-title="=欧美直播2=",=欧美直播2=
 #=欧美直播2=
 #EXTINF:-1 tvg-id="Blank.Dummy.us" group-title="=JAV轮播=",=JAV轮播=
@@ -102,20 +112,6 @@ http://main.canale-romanesti.com:80/AN2233795/sO0HIhVEWd38KH6OQnh2J5JwgCt8JX/707
 #=其它=
 #EXTINF:-1 tvg-id="Blank.Dummy.us" group-title="🔞松视台湾频道",🔞松视台湾频道
 #🔞松视台湾频道
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞松视台湾频道",彩虹动作影院
-http://114.241.254.251:4022/rtp/239.3.1.92:4120
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞松视台湾频道",彩虹家庭影院
-http://114.241.254.251:4022/rtp/239.3.1.93:4120
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞松视台湾频道",彩虹精选影院
-http://114.241.254.251:4022/rtp/239.3.1.74:4120
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞松视台湾频道",彩虹军旅剧场
-http://114.241.254.251:4022/rtp/239.3.1.68:4120
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞松视台湾频道",彩虹城市剧场
-http://114.241.254.251:4022/rtp/239.3.1.67:4120
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞松视台湾频道",彩虹武侠剧场
-http://114.241.254.251:4022/rtp/239.3.1.90:4120
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞松视台湾频道",彩虹魅力时尚
-http://114.241.254.251:4022/rtp/239.3.1.196:9012
 #EXTINF:-1 tvg-id="Blank.Dummy.us" group-title="🔞写真按摩频道",🔞写真按摩频道
 #🔞写真按摩频道
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞写真按摩频道",Pigoo
@@ -230,76 +226,28 @@ http://168.119.255.170/716/mono.m3u8?token=M4f082ab4c
 #🔞频道4
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",BRAZZERS
 http://206.212.244.71:8080/4wVQA7/625159/159966
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",CUM
-http://206.212.244.71:8080/4wVQA7/625159/159969
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",DIABOLIC
-http://206.212.244.71:8080/4wVQA7/625159/159972
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",DDF
+http://206.212.244.71:8080/4wVQA7/625159/159971
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",DORCEL
 http://206.212.244.71:8080/4wVQA7/625159/159975
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",FAKE
-http://206.212.244.71:8080/4wVQA7/625159/159979
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",FAMILY
-http://206.212.244.71:8080/4wVQA7/625159/159982
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",FIRST
-http://206.212.244.71:8080/4wVQA7/625159/159985
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",HENTAINED
-http://206.212.244.71:8080/4wVQA7/625159/159988
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",HOT
-http://206.212.244.71:8080/4wVQA7/625159/159991
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",JAYS
-http://206.212.244.71:8080/4wVQA7/625159/159994
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",JULES
-http://206.212.244.71:8080/4wVQA7/625159/159997
+http://206.212.244.71:8080/4wVQA7/625159/159981
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",FIT
+http://206.212.244.71:8080/4wVQA7/625159/159986
+#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",INTERRACIAL
+http://206.212.244.71:8080/4wVQA7/625159/159993
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",KINKY
-http://206.212.244.71:8080/4wVQA7/625159/159999
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",LETHAL
-http://206.212.244.71:8080/4wVQA7/625159/160002
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",LIFE
-http://206.212.244.71:8080/4wVQA7/625159/160004
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",LOVE
-http://206.212.244.71:8080/4wVQA7/625159/160005
+http://206.212.244.71:8080/4wVQA7/625159/159998
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",LOVE
 http://206.212.244.71:8080/4wVQA7/625159/160006
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",LUBED
-http://206.212.244.71:8080/4wVQA7/625159/160007
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",LUXURE
-http://206.212.244.71:8080/4wVQA7/625159/160008
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",MAMACITAZ
-http://206.212.244.71:8080/4wVQA7/625159/160009
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",MASSAGE
-http://206.212.244.71:8080/4wVQA7/625159/160010
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",MODEL
 http://206.212.244.71:8080/4wVQA7/625159/160011
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",MOFOS
-http://206.212.244.71:8080/4wVQA7/625159/160012
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",MOM
-http://206.212.244.71:8080/4wVQA7/625159/160013
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",MOM
-http://206.212.244.71:8080/4wVQA7/625159/160014
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",MOMMY
-http://206.212.244.71:8080/4wVQA7/625159/160015
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",MUST
 http://206.212.244.71:8080/4wVQA7/625159/160016
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",MY
-http://206.212.244.71:8080/4wVQA7/625159/160017
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",MY
-http://206.212.244.71:8080/4wVQA7/625159/160018
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",MY
-http://206.212.244.71:8080/4wVQA7/625159/160019
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",MY
-http://206.212.244.71:8080/4wVQA7/625159/160020
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",MY
 http://206.212.244.71:8080/4wVQA7/625159/160021
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",MYLF
-http://206.212.244.71:8080/4wVQA7/625159/160022
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",NEW
-http://206.212.244.71:8080/4wVQA7/625159/160023
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",NF
-http://206.212.244.71:8080/4wVQA7/625159/160024
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",NUBILE
 http://206.212.244.71:8080/4wVQA7/625159/160025
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",NURU
-http://206.212.244.71:8080/4wVQA7/625159/160026
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",PASSION
 http://206.212.244.71:8080/4wVQA7/625159/160027
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",PERV
@@ -320,20 +268,8 @@ http://206.212.244.71:8080/4wVQA7/625159/160034
 http://206.212.244.71:8080/4wVQA7/625159/160035
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",PUBLIC
 http://206.212.244.71:8080/4wVQA7/625159/160036
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",PURE
-http://206.212.244.71:8080/4wVQA7/625159/160037
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",REAL
-http://206.212.244.71:8080/4wVQA7/625159/160038
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",REALITY
 http://206.212.244.71:8080/4wVQA7/625159/160040
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",REALITY
-http://206.212.244.71:8080/4wVQA7/625159/160041
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",SLIM
-http://206.212.244.71:8080/4wVQA7/625159/160042
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",STROKIES
-http://206.212.244.71:8080/4wVQA7/625159/160043
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞频道4",SUGAR
-http://206.212.244.71:8080/4wVQA7/625159/160044
 #EXTINF:-1 tvg-id="Blank.Dummy.us" group-title="🔞港台情色",🔞港台情色
 #🔞港台情色
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞港台情色",销魂玉
@@ -380,8 +316,6 @@ https://ukzyll.ukubf6.com/20220528/woEv6Q0L/2000kb/hls/index.m3u8
 https://vod11.wgslsw.com/20240413/cdGDaZ0F/index.m3u8
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞港台情色",变身
 https://vod11.wgslsw.com/20240413/7zBawDWh/index.m3u8
-#EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞港台情色",危情杀机
-https://ukzyll.ukubf6.com/20220528/0I2i37Pd/2000kb/hls/index.m3u8
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞港台情色",纵欲聊斋
 https://ukzyll.ukubf6.com/20220717/a7JPTuHX/2000kb/hls/index.m3u8
 #EXTINF:-1 tvg-id="Blank.Dummy.us" tvg-logo="https://github.com/BuddyChewChew/gen-playlist/blob/main/docs/chb.png?raw=true" group-title="🔞港台情色",空虚少妇性告白
