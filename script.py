@@ -50,7 +50,7 @@ def server1(i, name):
             file.write(f'#EXTINF:-1 tvg-id="Adult.Programming.Dummy.us" tvg-name="{name}" tvg-logo="{CHANNEL_LOGO}" group-title="Adult 1",{name}\n')
             file.write(f"{stream_url}\n")
     else:
-        print("No URL found.")
+        print("😡 No URL found.")
 
 def server2(hash, name):
     print("Running Server 2")
